@@ -29,6 +29,9 @@ ls -l
 nano gustavo.html
 
 
+Restart httpd
+Restart ssh
+Change the hyphens to underscores
 
 go to filezilla and insert the appropriate information\
 insert an image if youd like 
