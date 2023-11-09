@@ -27,3 +27,11 @@ find /var/www -type f -exec sudo chmod 0664 {} \;
 cd /var/wwwhtml
 ls -l
 nano gustavo.html
+
+
+
+go to filezilla and insert the appropriate information\
+insert an image if youd like 
+go back to your AWS website and check your site and image
+YAY
+you made your first website with FileZilla, PuTTY, AWS, Linux, and HTML
