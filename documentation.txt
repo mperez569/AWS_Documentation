@@ -1,0 +1,29 @@
+Create new EC2 Instance, Launch a new Instance
+name you instance
+We are using Amazon Linux
+AMI - Amazon Linux 2 Kernel 5.10 AMI 2.0.20231101.0 x86_64 HVM gp2
+Instance Type: T2 Micro
+Create New Key Pair, name it whatever
+it will download onto your machine
+Make sure to save it and to zip to your personal machine if you want to continue to use your instance
+In Network Settings, click Allow SSH traffic from and Allow HTTP traffic
+Once your EC2 instance is launched, go to your security group and chceck the inbound rule to see if HTTP and SSH traffic is allowed
+Open PuTTY
+Enter the host name: ec2-user@paste your endpoint here
+Go to SSH, then Auth, then credentials, then browse to select your PPK
+
+sudo yum update -y
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo usermod -a -G apache ec2-user
+exit
+groups
+sudo chown-R ec2-user:apache /var/www
+sudo chmod 2775 /var/www
+find /var/www -type d -exec sudo chmod 2775 {} \;
+find /var/www -type f -exec sudo chmod 0664 {} \;
+cd /var/wwwhtml
+ls -l
+nano gustavo.html
