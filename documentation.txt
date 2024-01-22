@@ -1,3 +1,4 @@
+DOCUMENTATION NOT READY YET!!!! STILL IN PROGRESS
 Create new EC2 Instance, Launch a new Instance
 name you instance
 We are using Amazon Linux
